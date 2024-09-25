@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <link rel="icon" href="data:,">
+    <title>NASA APOD Viewer</title>
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+            font-family: Vollkorn;
+            text-align: left;
+            margin-top: 0;
+            padding: 0;
+            display: flex;
+        }
+        #input {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            display: block;
+        }
+        #lookup {
+            top: 10.5vh;
+            right: 2.5vw;
+            position: absolute;
+            height: 3vh;
+            /* display: block; */
+        }
+        #title {
+            text-align: left;
+            margin-bottom: 30px;
+            color:rgb(147, 172, 172)
+        }
+        #img {
+            margin-bottom: 30px;
+            max-height: 50%;
+            top: 0vh;
+        }
+        #description {
+            text-align: left;
+            /* width: 50%; */
+            margin: 0;
+            color:rgb(183, 184, 184)
+        }
+        .apod-column {
+            z-index: 1;
+            position: relative;
+            top: 0;
+            padding: 0;
+            margin: 0; /* No gap from the top */
+            width: 50%; /* Adjust width as needed */
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center horizontally */
+            justify-content: flex-start; /* Keep input at the top */
+            background-color: white; /* Left column background color */
+            border-right: 1px solid rgb(162, 169, 171);
+        }
+        .second-column {
+            z-index: 1;
+            position: relative;
+            top: 0;
+            padding: 0;
+            margin: 0; /* No gap from the top */
+            width: 50%; /* Adjust width as needed */
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center horizontally */
+            justify-content: flex-start; /* Keep input at the top */
+            background-color: black; /* Right column background color */
+            color: white; /* Ensure text is visible on black background */
+        }
+        #stargenerate {
+            top: 30%;
+            /* right: 50%; */
+            position: absolute;
+            height: 20%;
+            /* display: block; */
+        }
+    </style>
+</head>
+<body>
+    <div class="apod-column">
+        <h1>Star of the Day</h1>
+        <!-- <label for="date-input">Enter a Date</label> -->
+        <input type="date" id="date-input">
+        <!-- <button id="lookup" onclick="getAPOD()">Look Up</button> -->
+        <button id="lookup">Look Up</button>
+
+        <h2 id="title"></h2>
+        <img id="img" src="" alt="">
+        <p id="description"></p>       
+    </div>
+    <div class="second-column">
+        <h1>stAr 0F th3 DAy</h1>
+        <div id="inputDiv"></div>
+        <!-- <img id="stargenerate" src="starbutton.png" alt="" onclick="sendImageToAI()"> -->
+        <img id="stargenerate" src="starbutton.png" alt="">
+        <img id="outputImage" alt="Generated Image">
+        <div id="feedback"></div> <!-- For feedback messages -->
+    </div>
+     <!-- <script src="apod.js"></script> -->
+    <script type="module" src="apod.js"></script>
+    <script type="module" src="image.js"></script>
+
+</body>
+</html>
+
