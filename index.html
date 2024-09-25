@@ -10,11 +10,18 @@
     <style>
         body {
             background-color: rgb(255, 255, 255);
-            font-family: Vollkorn;
+            font-family: 'calibri';
+            font-size: smaller;
             text-align: left;
             margin-top: 0;
             padding: 0;
             display: flex;
+        }
+        h1 {
+            font-family: Vollkorn;
+            text-align: left;
+            margin-bottom: 30px;
+            color:rgb(147, 172, 172)
         }
         #input {
             position: absolute;
@@ -31,6 +38,7 @@
             /* display: block; */
         }
         #title {
+            font-family: Vollkorn;
             text-align: left;
             margin-bottom: 30px;
             color:rgb(147, 172, 172)
@@ -41,6 +49,7 @@
             top: 0vh;
         }
         #description {
+            font-family: Vollkorn;
             text-align: left;
             /* width: 50%; */
             margin: 0;
@@ -77,11 +86,30 @@
             color: white; /* Ensure text is visible on black background */
         }
         #stargenerate {
-            top: 30%;
+            top: 10%;
             /* right: 50%; */
             position: absolute;
-            height: 20%;
+            height: 4.5%;
             /* display: block; */
+        }
+        #titlegenerate {
+            top: 10%;
+            right: 60%;
+            position: absolute;
+            height: 4%;
+            /* display: block; */
+        }
+        #title2 {
+            font-family: Vollkorn;
+            text-align: left;
+            margin-bottom: 30px;
+            color:rgb(147, 172, 172)
+        }
+        #outputImage {
+            margin-top: 50px;
+            margin-bottom: 30px;
+            max-height: 50%;
+            top: 0vh;
         }
     </style>
 </head>
@@ -98,16 +126,22 @@
         <p id="description"></p>       
     </div>
     <div class="second-column">
-        <h1>stAr 0F th3 DAy</h1>
+        <h1>$tAr 0F th3 dAy</h1>
         <div id="inputDiv"></div>
         <!-- <img id="stargenerate" src="starbutton.png" alt="" onclick="sendImageToAI()"> -->
         <img id="stargenerate" src="starbutton.png" alt="">
-        <img id="outputImage" alt="Generated Image">
+        <img id="outputImage" alt="">
+
+        <img id="titlegenerate" src="titlegenerate.png" alt"">
+        <h2 id="title2"></h2>
+
         <div id="feedback"></div> <!-- For feedback messages -->
     </div>
      <!-- <script src="apod.js"></script> -->
     <script type="module" src="apod.js"></script>
     <script type="module" src="image.js"></script>
+    <script type="module" src="title.js"></script>
+
 
 </body>
 </html>

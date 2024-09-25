@@ -31,7 +31,7 @@ export async function sendImageToAI() {
         };
 
         let feedback = document.getElementById("feedback");
-        feedback.innerHTML = "Waiting for reply from API...";
+        feedback.innerHTML = "waiting for reply from API...";
         let url = "https://replicate-api-proxy.glitch.me" + "/create_n_get/";
 
         let response = await fetch(url, {
